@@ -26,6 +26,12 @@ export default async function Home() {
               </li>
             ))}
           </ul>
+
+          <div className="read-more">
+            <AnimatedLink href="/blog" className="read-more-link">
+              read more posts →
+            </AnimatedLink>
+          </div>
         </div>
       </main>
       
