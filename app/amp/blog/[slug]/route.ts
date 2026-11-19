@@ -1,5 +1,12 @@
 import { NextResponse } from 'next/server';
-import { getPostData } from '../../../../utils/blog';
+import { getPostData, getAllPostSlugs } from '../../../../utils/blog';
+
+export async function generateStaticParams() {
+  const slugs = getAllPostSlugs();
+  return slugs.map((slug) => ({
+    slug,
+  }));
+}
 
 function toAmpHtml(html: string): string {
   let amp = html;

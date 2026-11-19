@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getPostsSummary } from '../../utils/blog';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
   const posts = getPostsSummary();
