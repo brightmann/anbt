@@ -1,6 +1,6 @@
 ---
 title: "梦驼铃"
-date: "2026-11-18"
+date: "2026-11-18T21:05"
 read_time: "9 minutes"
 description: "这是一篇文章"
 tags: "misc1, misc2, misc3"
