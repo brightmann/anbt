@@ -116,7 +116,7 @@ export async function getPostData(slug: string): Promise<BlogPost> {
     // Use remark to convert markdown into HTML string
     const processedContent = await remark()
       .use(addHeadingIds)
-      .use(html)
+      .use(html, { sanitize: false }) // keep raw HTML (e.g. YouTube iframes); default sanitizer strips <iframe>
       .process(matterResult.content);
     const contentHtml = enhanceImagesInHtml(processedContent.toString());
 
